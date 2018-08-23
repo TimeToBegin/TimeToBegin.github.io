@@ -74,7 +74,7 @@
     z-index: 1;
     overflow: hidden;
 }
-.home-banner-box .index-banner .swiper-slide-prev::after, .home-banner-box .index-banner .swiper-slide-next::after {
+.home-banner-box .index-banner .swiper-slide:after {
     content: '';
     position: absolute;
     left: 0;
@@ -82,6 +82,9 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.60);
+}
+.home-banner-box .index-banner .swiper-slide.swiper-slide-active:after {
+	display: none;
 }
 .home-banner-box .index-banner .slideImg {
     width: 1200px;
@@ -98,7 +101,9 @@
 .atvImg .swiper-slide-duplicate-prev .slideImg img{
 	height: 480px;
 }
-.home-banner-box .index-banner .swiper-slide-duplicate, .home-banner-box .index-banner .swiper-slide-prev, .home-banner-box .index-banner .swiper-slide-next {
+/*.home-banner-box .index-banner .swiper-slide-duplicate, .home-banner-box .index-banner .swiper-slide-prev, .home-banner-box .index-banner .swiper-slide-next {*/
+.home-banner-box .index-banner .swiper-slide-prev, .home-banner-box .index-banner .swiper-slide-next {
+   
     height: 480px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -151,124 +156,33 @@
 	</head>
 	<body>
 		
- <div class="home-banner-box">
+ <div class="home-banner-box" style="margin-top: 100px;">
  	 <div class="index-banner">
-    <div class="swiper-container swiper-container-horizontal" id="newBannerSwiper" style="cursor: grab;">
+    <div class="swiper-container " id="newBannerSwiper" style="cursor: grab;">
 
-      <div class="swiper-wrapper" style="transform: translate3d(-14289.5px, 0px, 0px); transition-duration: 0ms;"><a class="swiper-slide atvImg swiper-slide-duplicate" href="http://ad.doubleclick.net/ddm/trackclk/N5751.1914449/B21508848.225802748;dc_trk_aid=423957357;dc_trk_cid=104109000?http://clickc.admaster.com.cn/c/a112063,b2761310,c4551,i0,m101,8a1,8b3,0k10038,h,uhttp://www.dgtle.com/article-24949-1.html" target="_blank" data-swiper-slide-index="0" style="margin-right: 20px;">
+<div class="swiper-wrapper">
+      	<a class="swiper-slide atvImg " >
           <div class="slideImg">
             <img src="http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg" style="background-image:url('http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg')"></div>
           </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate" href="portal.php?mod=view&amp;aid=24926" target="_blank" data-swiper-slide-index="1" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/22/094104a1ib9985i9fe4c1r.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/22/094104a1ib9985i9fe4c1r.png" style="background-image:url('http://s2.dgtle.com/portal/201808/22/094104a1ib9985i9fe4c1r.png')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate" href="portal.php?mod=view&amp;aid=24783" target="_blank" data-swiper-slide-index="2" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/14/091826g99anom9lr3aplpb.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/14/091826g99anom9lr3aplpb.png" style="background-image:url('http://s2.dgtle.com/portal/201808/14/091826g99anom9lr3aplpb.png')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate" href="portal.php?mod=view&amp;aid=24918" target="_blank" data-swiper-slide-index="3" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/20/155309p0r4n08mr0ln6e33.jpg">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/20/155309p0r4n08mr0ln6e33.jpg" style="background-image:url('http://s2.dgtle.com/portal/201808/20/155309p0r4n08mr0ln6e33.jpg')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate swiper-slide-duplicate-prev" href="portal.php?mod=view&amp;aid=24914" target="_blank" data-swiper-slide-index="4" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/20/135333v9vdzf5vy56rrrwf.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/20/135333v9vdzf5vy56rrrwf.png" style="background-image:url('http://s2.dgtle.com/portal/201808/20/135333v9vdzf5vy56rrrwf.png')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate swiper-slide-duplicate-active" href="http://www.dgtle.com/article-24887-1.html" target="_blank" data-swiper-slide-index="5" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/20/123128uykr2jiup2ttpipi.jpg">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/20/123128uykr2jiup2ttpipi.jpg" style="background-image:url('http://s2.dgtle.com/portal/201808/20/123128uykr2jiup2ttpipi.jpg')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate swiper-slide-duplicate-next" href="portal.php?mod=view&amp;aid=24813" target="_blank" data-swiper-slide-index="6" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/16/122332w141gv8nbbl6yl8b.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/16/122332w141gv8nbbl6yl8b.png" style="background-image:url('http://s2.dgtle.com/portal/201808/16/122332w141gv8nbbl6yl8b.png')"></div>
-          </div>
- </a>
-        <a class="swiper-slide atvImg" href="http://ad.doubleclick.net/ddm/trackclk/N5751.1914449/B21508848.225802748;dc_trk_aid=423957357;dc_trk_cid=104109000?http://clickc.admaster.com.cn/c/a112063,b2761310,c4551,i0,m101,8a1,8b3,0k10038,h,uhttp://www.dgtle.com/article-24949-1.html" target="_blank" data-swiper-slide-index="0" style="margin-right: 20px;">
+       </a>
+       <a class="swiper-slide atvImg " >
           <div class="slideImg">
             <img src="http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg" style="background-image:url('http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg')"></div>
           </div>
- </a><a class="swiper-slide atvImg" href="portal.php?mod=view&amp;aid=24926" target="_blank" data-swiper-slide-index="1" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/22/094104a1ib9985i9fe4c1r.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/22/094104a1ib9985i9fe4c1r.png" style="background-image:url('http://s2.dgtle.com/portal/201808/22/094104a1ib9985i9fe4c1r.png')"></div>
-          </div>
- </a><a class="swiper-slide atvImg" href="portal.php?mod=view&amp;aid=24783" target="_blank" data-swiper-slide-index="2" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/14/091826g99anom9lr3aplpb.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/14/091826g99anom9lr3aplpb.png" style="background-image:url('http://s2.dgtle.com/portal/201808/14/091826g99anom9lr3aplpb.png')"></div>
-          </div>
- </a><a class="swiper-slide atvImg" href="portal.php?mod=view&amp;aid=24918" target="_blank" data-swiper-slide-index="3" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/20/155309p0r4n08mr0ln6e33.jpg">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/20/155309p0r4n08mr0ln6e33.jpg" style="background-image:url('http://s2.dgtle.com/portal/201808/20/155309p0r4n08mr0ln6e33.jpg')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-prev" href="portal.php?mod=view&amp;aid=24914" target="_blank" data-swiper-slide-index="4" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/20/135333v9vdzf5vy56rrrwf.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/20/135333v9vdzf5vy56rrrwf.png" style="background-image:url('http://s2.dgtle.com/portal/201808/20/135333v9vdzf5vy56rrrwf.png')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-active" href="http://www.dgtle.com/article-24887-1.html" target="_blank" data-swiper-slide-index="5" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/20/123128uykr2jiup2ttpipi.jpg">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/20/123128uykr2jiup2ttpipi.jpg" style="background-image:url('http://s2.dgtle.com/portal/201808/20/123128uykr2jiup2ttpipi.jpg')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-next" href="portal.php?mod=view&amp;aid=24813" target="_blank" data-swiper-slide-index="6" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/16/122332w141gv8nbbl6yl8b.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/16/122332w141gv8nbbl6yl8b.png" style="background-image:url('http://s2.dgtle.com/portal/201808/16/122332w141gv8nbbl6yl8b.png')"></div>
-          </div>
- </a>        <!--<a class="swiper-slide atvImg" href="http://baidu.com" target="_blank">-->
-        <!--<div class='slideImg'>-->
-        <!--<img src='http://s.dgtle.com/portal/201709/22/120724kvjvsdp07ghfl025.jpg'>-->
-        <!--<div class='atvImg-layer' data-img='http://s.dgtle.com/portal/201709/22/120724kvjvsdp07ghfl025.jpg'></div>-->
-        <!--</div>-->
-        <!--</a>-->
-
-      <a class="swiper-slide atvImg swiper-slide-duplicate" href="http://ad.doubleclick.net/ddm/trackclk/N5751.1914449/B21508848.225802748;dc_trk_aid=423957357;dc_trk_cid=104109000?http://clickc.admaster.com.cn/c/a112063,b2761310,c4551,i0,m101,8a1,8b3,0k10038,h,uhttp://www.dgtle.com/article-24949-1.html" target="_blank" data-swiper-slide-index="0" style="margin-right: 20px;">
+       </a>
+       <a class="swiper-slide atvImg " >
           <div class="slideImg">
             <img src="http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg" style="background-image:url('http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg')"></div>
           </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate" href="portal.php?mod=view&amp;aid=24926" target="_blank" data-swiper-slide-index="1" style="margin-right: 20px;">
+       </a>
+       <a class="swiper-slide atvImg " >
           <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/22/094104a1ib9985i9fe4c1r.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/22/094104a1ib9985i9fe4c1r.png" style="background-image:url('http://s2.dgtle.com/portal/201808/22/094104a1ib9985i9fe4c1r.png')"></div>
+            <img src="http://s2.dgtle.com/portal/201808/22/111051ecw468gh6fm4umhu.jpg">
           </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate" href="portal.php?mod=view&amp;aid=24783" target="_blank" data-swiper-slide-index="2" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/14/091826g99anom9lr3aplpb.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/14/091826g99anom9lr3aplpb.png" style="background-image:url('http://s2.dgtle.com/portal/201808/14/091826g99anom9lr3aplpb.png')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate" href="portal.php?mod=view&amp;aid=24918" target="_blank" data-swiper-slide-index="3" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/20/155309p0r4n08mr0ln6e33.jpg">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/20/155309p0r4n08mr0ln6e33.jpg" style="background-image:url('http://s2.dgtle.com/portal/201808/20/155309p0r4n08mr0ln6e33.jpg')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate swiper-slide-duplicate-prev" href="portal.php?mod=view&amp;aid=24914" target="_blank" data-swiper-slide-index="4" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/20/135333v9vdzf5vy56rrrwf.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/20/135333v9vdzf5vy56rrrwf.png" style="background-image:url('http://s2.dgtle.com/portal/201808/20/135333v9vdzf5vy56rrrwf.png')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate swiper-slide-duplicate-active" href="http://www.dgtle.com/article-24887-1.html" target="_blank" data-swiper-slide-index="5" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/20/123128uykr2jiup2ttpipi.jpg">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/20/123128uykr2jiup2ttpipi.jpg" style="background-image:url('http://s2.dgtle.com/portal/201808/20/123128uykr2jiup2ttpipi.jpg')"></div>
-          </div>
- </a><a class="swiper-slide atvImg swiper-slide-duplicate swiper-slide-duplicate-next" href="portal.php?mod=view&amp;aid=24813" target="_blank" data-swiper-slide-index="6" style="margin-right: 20px;">
-          <div class="slideImg">
-            <img src="http://s2.dgtle.com/portal/201808/16/122332w141gv8nbbl6yl8b.png">
-            <div class="atvImg-layer" data-img="http://s2.dgtle.com/portal/201808/16/122332w141gv8nbbl6yl8b.png" style="background-image:url('http://s2.dgtle.com/portal/201808/16/122332w141gv8nbbl6yl8b.png')"></div>
-          </div>
- </a></div>
+       </a>
+ 
+</div>
       <!-- 如果需要分页器 -->
       <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
       <!-- 如果需要导航按钮 -->
@@ -292,27 +206,20 @@
     	 direction: 'horizontal',
       loop: true, //让Swiper看起来是循环的
       autoplay: 300000, //自动切换的时间间隔
-      speed: 500,
+      speed: 800,
       grabCursor: true, //设置为true时，鼠标覆盖Swiper时指针会变成手掌形状，拖动时指针会变成抓手形状
       pagination: '.swiper-pagination', //开启分页器，默认为圆点
       paginationType: 'bullets', //圆点
       prevButton: '.swiper-button-prev', //前进按钮的css选择器或HTML元素
       nextButton: '.swiper-button-next', //后退按钮的css选择器或HTML元素
       paginationClickable: true, //此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换
-      autoplayDisableOnInteraction: false,
-      effect: 'slide',
+//    autoplayDisableOnInteraction: false,
+//    effect: 'slide',
       slidesPerView: 'auto',
       spaceBetween: 20,
-      // notNextTick: true,
       centeredSlides: true,
-      observeParents: true,
-      // coverflow: {
-      //     rotate: 0,
-      //     stretch: 10,
-      //     depth: 25,
-      //     modifier: 3,
-      //     slideShadows : true
-      // },
+//    observeParents: true,
+//    
       onInit: function (swiper) {
         // atvImg()
       },
@@ -320,19 +227,6 @@
         // atvImg()
       }
     });
-//  jQuery('#newBannerSwiper').mouseover(function () {
-//    my_swiper.stopAutoplay();
-//  }).mouseout(function () {
-//    my_swiper.startAutoplay();
-//  })
-//  jQuery(document).on('click', '#newBannerSwiper .swiper-slide-prev', function (e) {
-//    e.preventDefault();
-//    my_swiper.slidePrev();
-//  })
-//  jQuery(document).on('click', '#newBannerSwiper .swiper-slide-next', function (e) {
-//    e.preventDefault();
-//    my_swiper.slideNext();
-//  })
 
     jQuery('#newBannerSwiper .swiper-button-prev').css('left', (document.body.clientWidth - 1200) / 2 + 20);
     jQuery('#newBannerSwiper .swiper-button-next').css('right', (document.body.clientWidth - 1200) / 2 + 20);
