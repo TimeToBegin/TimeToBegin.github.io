@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Test</title>
+  <style type="text/css">
+    * {
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .btn {
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      background: green;
+      color: #fff;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .container {
+      background: #e5e5e5;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.bootcss.com/html2canvas/0.4.1/html2canvas.js"></script>
+  <script>
+
+    $(function () {
+      $("#btn").click(function () {
+        html2canvas($("#container"), {
+          onrendered: function (canvas) {
+            //把截取到的图片替换到a标签的路径下载 
+            $("#download").attr('href', canvas.toDataURL());
+            //下载下来的图片名字 
+            $("#download").attr('download', 'share.png');
+            document.body.appendChild(canvas);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div style="padding:10px 0">
+    <div class="btn" id="btn">截取屏幕</div>
+    <div style="margin-top:10px">
+      <a href="javascript:;" rel="external nofollow" class="btn" id="download">截图下载</a>
+    </div>
+  </div>
+  <div class="container" id="container" style="padding: 10px; background: #f5da55">
+    <h4 style="color: #000; ">Hello world!</h4>
+    <div data-v-d72d9998="" data-v-c367c60c="" imglist="" data="[object Object]">
+      <div data-v-d72d9998="" class="detail-dinner-title">审核通过</div>
+      <div data-v-d72d9998="" class="detail-dinner-detail">
+        <p>审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过</p>
+     
+        <p>审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过</p>
+     
+        <p>审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过审核通过</p>
+      </div>
+    </div>
+    <img src="./xian.png" alt="" srcset="">
+  </div>
+
+</body>
+
+</html>
